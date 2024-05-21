@@ -3,6 +3,8 @@ import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/do
 import { setup } from 'twind';
 import { asyncVirtualSheet, getStyleTagProperties } from 'twind/server';
 import twindConfig from '../twind.config';
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 const sheet = asyncVirtualSheet();
 
@@ -37,6 +39,19 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
+
+          {/*/!*<!-- Google tag (gtag.js) -->*!/*/}
+          {/*<script async src="https://www.googletagmanager.com/gtag/js?id=G-8QFVWHJQBB"></script>*/}
+          {/*<script>*/}
+          {/*  window.dataLayer = window.dataLayer || [];*/}
+          {/*  /!* @ts-ignore*!/*/}
+          {/*  function gtag(){dataLayer.push(arguments)}*/}
+          {/*  gtag('js', new Date());*/}
+
+          {/*  gtag('config', );*/}
+          {/*</script>*/}
+          <GoogleAnalytics gaId = 'G-8QFVWHJQBB'/>
+
         </Head>
         <body>
           <Main />
