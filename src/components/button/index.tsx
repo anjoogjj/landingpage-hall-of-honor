@@ -1,4 +1,5 @@
 import { tw } from 'twind';
+import { DetailsHTMLAttributes } from 'react';
 
 interface IButton {
   primary?: boolean;
@@ -6,7 +7,7 @@ interface IButton {
   modifier?: string;
 }
 
-const Button = ({ primary, modifier, children, ...rest }: IButton) => {
+const Button = ({ primary, modifier, children, ...rest }: IButton & DetailsHTMLAttributes<HTMLButtonElement>) => {
   const baseStyle = `font-sans font-medium py-2 px-4 border rounded`;
   const styles = primary
     ? `bg-indigo-600 text-white border-indigo-500 hover:bg-indigo-700`
