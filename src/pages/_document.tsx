@@ -50,7 +50,6 @@ class MyDocument extends Document {
 
           {/*  gtag('config', );*/}
           {/*</script>*/}
-          <GoogleAnalytics gaId = 'G-8QFVWHJQBB'/>
 
         </Head>
         <body>

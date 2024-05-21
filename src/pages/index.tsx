@@ -8,6 +8,8 @@ import CasesSection from '@/components/cases-section';
 import SocialProof from '@/components/social-proof';
 import PricingTable from '@/components/pricing-table';
 import Footer from '@/components/footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import * as React from 'react';
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
         title="STARTD - Template"
         description="A TypeScript/Next.js theme that includes everything you need to build amazing landing page!"
       />
+      <GoogleAnalytics gaId = 'G-8QFVWHJQBB'/>
       <Header />
       <main>
         <VideoSection />
